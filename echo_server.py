@@ -8,6 +8,7 @@ def main():
 
     print("Listening for a new client connection")
     conn, address = server.accept()
+    print("Client connected!")
 
     print("Waiting for a message from the client...")
     client_data = conn.recv(1024)
