@@ -5,6 +5,8 @@ def main():
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.bind((socket.gethostname(), 12345))
     server.listen(1)
+
+    print("Listening for a new client connection")
     conn, address = server.accept()
 
     print("Waiting for a message from the client...")

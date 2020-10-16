@@ -7,7 +7,7 @@ def main():
 
     echo_data = "hello server!"
     print(f"Sending server: {echo_data}")
-    client.send(echo_data)
+    client.send(echo_data.encode('utf-8'))
 
     echo_from_server = client.recv(1024)
     print(f"Received from server: {echo_from_server}")
